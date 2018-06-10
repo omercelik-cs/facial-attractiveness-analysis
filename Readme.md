@@ -11,6 +11,6 @@ Features obtained from:
 2.Then you can train your own model by running train.py
 3.You can test with a single image by running demo.py (give the path at the beginning)
 
-Required libraries: Dlib, OpenCV, numpy, scipy
+Required libraries: Dlib, OpenCV, numpy, scipy,sklearn
 
 Please see [http://www.hcii-lab.net/data/SCUT-FBP/EN/introduce.html](SCUT-FBP) to download the entire dataset.
