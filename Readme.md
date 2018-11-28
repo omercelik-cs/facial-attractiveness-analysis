@@ -17,9 +17,11 @@ Required libraries: Dlib, OpenCV, numpy, scipy,sklearn
 
 
 Validation results: 
-![Results](https://github.com/omercelik-cs/Biometric-System-Performance-Evaluation/blob/master/roc.PNG)
+
+![Results](https://github.com/omercelik-cs/facial-attractiveness-analysis/blob/master/imgs/results.png)
 
 Demo: 
-![Demo](https://github.com/omercelik-cs/Biometric-System-Performance-Evaluation/blob/master/density.PNG)
+
+![Demo](https://github.com/omercelik-cs/facial-attractiveness-analysis/blob/master/imgs/demo-test1.png)
 
 Please see [http://www.hcii-lab.net/data/SCUT-FBP/EN/introduce.html](SCUT-FBP) to download the entire dataset.
