@@ -18,7 +18,7 @@ Required libraries: Dlib, OpenCV, numpy, scipy,sklearn
 
 Validation results: 
 
-![Results](https://github.com/omercelik-cs/facial-attractiveness-analysis/blob/master/imgs/results.png =250x250)
+![Results](https://github.com/omercelik-cs/facial-attractiveness-analysis/blob/master/imgs/results.png width="250" height="250")
 
 Demo: 
 
