@@ -18,10 +18,10 @@ Required libraries: Dlib, OpenCV, numpy, scipy,sklearn
 
 Validation results: 
 
-![Results](https://github.com/omercelik-cs/facial-attractiveness-analysis/blob/master/imgs/results.png)
+![Results](https://github.com/omercelik-cs/facial-attractiveness-analysis/blob/master/imgs/results.png =250x250)
 
 Demo: 
 
-![Demo](https://github.com/omercelik-cs/facial-attractiveness-analysis/blob/master/imgs/demo-test1.png)
+![Demo](https://github.com/omercelik-cs/facial-attractiveness-analysis/blob/master/imgs/demo-test1.png =250x250)
 
 Please see [http://www.hcii-lab.net/data/SCUT-FBP/EN/introduce.html](SCUT-FBP) to download the entire dataset.
