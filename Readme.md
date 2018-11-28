@@ -14,4 +14,12 @@ How to run:
 
 Required libraries: Dlib, OpenCV, numpy, scipy,sklearn
 
+
+
+Validation results: 
+![Results](https://github.com/omercelik-cs/Biometric-System-Performance-Evaluation/blob/master/roc.PNG)
+
+Demo: 
+![Demo](https://github.com/omercelik-cs/Biometric-System-Performance-Evaluation/blob/master/density.PNG)
+
 Please see [http://www.hcii-lab.net/data/SCUT-FBP/EN/introduce.html](SCUT-FBP) to download the entire dataset.
