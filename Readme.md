@@ -12,7 +12,7 @@ How to run:
 * Then you can train your own model by running train.py
 * You can test with a single image by running demo.py (give the path at the beginning)
 
-Required libraries: Dlib, OpenCV, numpy, scipy,sklearn
+Required libraries: Dlib, OpenCV, numpy, scipy,sklearn,imutils
 
 
 
