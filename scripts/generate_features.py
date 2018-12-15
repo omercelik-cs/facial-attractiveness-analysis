@@ -1,7 +1,3 @@
-# USAGE
-# python generate_landmarks.py --shape-predictor shape_predictor_68_face_landmarks.dat --image resim.jpg 
-
-# import the necessary packages
 from imutils import face_utils
 import numpy as np
 import argparse
@@ -28,12 +24,14 @@ def cropFace(image):
 	#cv2.imshow("s", crop_img)
 	return crop_img
 
+# calculate euclidian distance
 def calculateDistance(pts,landmarkCords):
 	x1,y1 = landmarkCords[pts[0]]
 	x2,y2 = landmarkCords[pts[1]]
 	distance = math.sqrt((x1-x2)**2 + (y1-y2)**2)
 	return distance
 
+# ratio between two distances
 def calculateRatio(pts,landmarkCords):
 	x1,y1 = landmarkCords[pts[0]]
 	x2,y2 = landmarkCords[pts[1]]
@@ -48,7 +46,7 @@ def generateSymmetryFeatures(landmarkCords):
 	combinations = itertools.combinations(attractivePoints, 4)
 	ratios = []
 	#comb_list = list(combinations)
-	#print(comb_list[3264], comb_list[561], comb_list[2498], comb_list[528], comb_list[544]) # most attrracive 5 points
+	#print(comb_list[3264], comb_list[561], comb_list[2498], comb_list[528], comb_list[544]) # most attrracive 5 ratios
 	for combination in combinations:
 		ratios.append(calculateRatio(combination,landmarkCords))
 	return ratios
@@ -60,7 +58,7 @@ def generateDistanceFeatures(landmarkCords):
 	combinations = itertools.combinations(distancePoints, 2)
 	distances = []
 	#comb_list = list(combinations)
-	#print (comb_list[1477],comb_list[1476],comb_list[2226],comb_list[1004],comb_list[307]) # most attractive 5 points
+	#print (comb_list[1477],comb_list[1476],comb_list[2226],comb_list[1004],comb_list[307]) # most attractive 5 distances
 	for combination in combinations:
 		distances.append(calculateDistance(combination,landmarkCords))
 	return distances
@@ -75,10 +73,11 @@ if __name__ == '__main__':
 		landmarkCords = predictLandMarks(image)
 		features = [] # all features to be appended
 
-		# generate landmark features
+		# generate ratio values
 		ratios = generateSymmetryFeatures(landmarkCords)
 		features.extend(ratios)
 
+        # generate distance values
 		distances = generateDistanceFeatures(landmarkCords)
 		features.extend(distances)
 
@@ -86,11 +85,6 @@ if __name__ == '__main__':
 		gabor_features = gabor_filter(face)
 		features.extend(gabor_features)
 
-		# apply canny edge detecter get edge density feature from face
-		edge_density_feature = canny_edge_density(face)
-		features.append(edge_density_feature)
 		print (len(features))
-
 		f.write(','.join(str("{0:.5f}".format(i)) for i in features))
 		f.write("\n")
-	#cv2.waitKey(0)
