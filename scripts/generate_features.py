@@ -7,7 +7,6 @@ import cv2
 import itertools
 import math
 from gabor_features import gabor_filter
-from edge_density import canny_edge_density
 from landmark_features import predictLandMarks
 
 def cropFace(image):
