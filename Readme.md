@@ -24,4 +24,4 @@ Demo:
 
 ![Demo](https://github.com/omercelik-cs/facial-attractiveness-analysis/blob/master/imgs/demo-test.png)
 
-Please see [http://www.hcii-lab.net/data/SCUT-FBP/EN/introduce.html](SCUT-FBP) to download the entire dataset.
+Please see [http://www.hcii-lab.net/data/SCUT-FBP/EN/introduce.html](http://www.hcii-lab.net/data/SCUT-FBP/EN/introduce.html) to download the entire dataset.
